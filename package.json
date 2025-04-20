@@ -1,0 +1,27 @@
+{
+  "name": "docker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "bin": {
+    "docker": "./bin/docker"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Santiago-Rivera/Docker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Santiago-Rivera/Docker/issues"
+  },
+  "homepage": "https://github.com/Santiago-Rivera/Docker#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0",
+    "nodemon": "^3.1.9"
+  }
+}
