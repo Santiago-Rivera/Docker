@@ -1,17 +1,17 @@
 {
-  "name": "docker",
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "mi-proyecto",
   "version": "1.0.0",
-  "main": "server.js",
+  "description": "Descripción de tu proyecto",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "jest"
   },
   "keywords": [],
-  "author": "",
+  "author": "Tu nombre",
   "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "body-parser": "^2.2.0",
-    "express": "^5.1.0"
-  }
+  "dependencies": {},
+  "devDependencies": {}
 }
