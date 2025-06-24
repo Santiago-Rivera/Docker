@@ -1,17 +1,34 @@
 {
-  "$schema": "https://json.schemastore.org/package.json",
-  "name": "mi-proyecto",
+  "name": "mi-proyecto-docker",
   "version": "1.0.0",
-  "description": "Descripción de tu proyecto",
+  "description": "Aplicación Node.js con Docker",
   "main": "index.js",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "jest"
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "docker:build": "docker build -t mi-proyecto .",
+    "docker:run": "docker run -p 3000:3000 mi-proyecto",
+    "docker:dev": "docker run -p 3000:3000 -v $(pwd):/app mi-proyecto",
+    "docker:stop": "docker stop $(docker ps -q --filter ancestor=mi-proyecto)"
   },
-  "keywords": [],
-  "author": "Tu nombre",
+  "keywords": ["nodejs", "docker", "express"],
+  "author": "santiago",
   "license": "ISC",
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "jest": "^29.7.0",
+    "eslint": "^8.0.0",
+    "@eslint/js": "^8.0.0"
+  }
 }
