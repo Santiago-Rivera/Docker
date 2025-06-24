@@ -1,13 +1,7 @@
-FROM node:23.11.0
+FROM python:3-alpine3.22
 
-WORKDIR /usr/src/app
+WORKDIR /app
 
-COPY package.json ./
+COPY . /app
 
-RUN npm install
-
-COPY . .
-
-EXPOSE 3000
-
-CMD [ "node", "myapp.mjs" ]
+CMD [ "python", "rng.py" ]
