@@ -1,7 +1,7 @@
-FROM python:3-alpine3.22
+FROM node:18-alpine3.20
 
 WORKDIR /app
 
 COPY . /app
 
-CMD [ "python", "rng.py" ]
+CMD [ "node", "server.js" ]
